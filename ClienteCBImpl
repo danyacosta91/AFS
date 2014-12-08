@@ -1,0 +1,21 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+/**
+ *
+ * @author Daniel Acosta
+ */
+public class ClienteCBImpl extends UnicastRemoteObject implements ClienteCB {
+    public ClienteCBImpl() throws RemoteException {}
+    public void readDirectory(DirStruct list) throws RemoteException{
+    	
+    }
+    public void readFile(String location, String name, String content) throws RemoteException{
+
+    }
+}

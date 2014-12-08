@@ -1,0 +1,17 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+/**
+ *
+ * @author Daniel Acosta
+ */
+public interface ClienteCB extends Remote {
+    public void readDirectory(DirStruct list) throws RemoteException;   
+    public void readFile(String location, String name, String content) throws RemoteException;
+}
+

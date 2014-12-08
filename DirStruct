@@ -1,0 +1,69 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Daniel Acosta
+ */
+public class DirStruct{
+	private String _name;
+	private long double _size;
+	private String _cDate;
+	private int _version;
+	private boolean _dir;
+	private String _cUser;
+
+    public DirStruct(){
+
+    }
+
+    public String getName(){
+    	return this._name;
+    }
+
+    public long double getSize(){
+    	return this._size;
+    }
+
+    public String getCDate(){
+    	return this._cDate;
+    }
+
+    public int getVersion(){
+    	return this._version;
+    }
+
+    public boolean isDir(){
+    	return this._dir;
+    }
+
+    public String getCUser(){
+    	return this._cUser;
+    }
+
+    public void setName(String name){
+    	this._name = name;
+    }
+
+    public void setSize(long double size){
+    	this._size = size;
+    }
+
+    public void setCDate(String date){
+    	this._cDate = date;
+    }
+
+    public void setVersion(int version){
+    	this._version = version;
+    }
+
+    public void setDir(boolean dir){
+    	this._dir = dir;
+    }
+
+    public void setCUser(String user){
+    	this._cUser = user;
+    }
+}
