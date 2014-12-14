@@ -1,0 +1,30 @@
+SISTEMAS OPERATIVOS II, CCC402
+Segundo PARCIAL, segundo semestre, quinto periodo
+Proyecto
+Implementación del sistema de archivos distribuido basado en AFS
+
+Descripción
+El sistema de archivos distribuido es una aplicación cliente-servidor que tiene como propósito el acceso a los archivos que están ubicados en el servidor ya sea para la lectura y/o escritura. Para facilitar el acceso a los archivos, el front-end deberá guardar una copia completa del archivo en el sistema de archivos local del cliente. De esta manera, el cliente local hará las lecturas y las escrituras en el lado del cliente. Una vez que se cierra el archivo y si ha sido modificado, este se envía al servidor para ser actualizado. 
+Si hay varios clientes accediendo a este archivo, el servidor les notifica que este archivo ha sido modificado y que debe volver a leerlo desde el servidor. Para esto el servidor debe tener un registro de los clientes que están accediendo a cada archivo.
+Si hay dos clientes que quieren enviar un archivo modificado al servidor al mismo tiempo, el último que cierra el archivo es la copia que se guarda en el servidor. 
+Solamente se soportan archivos de texto. 
+
+Grupo #1
+Desarrolla la aplicación cliente y el Front End 
+Implementación del Front-End que hace lo siguiente:
+1.	Lectura del archivo desde el servidor 
+2.	Mantiene la consistencia del cache
+3.	Lectura de la estructura de directorios del DFS
+
+Implementación de la aplicación cliente contiene
+1.	La interfaz gráfica para visualizar la estructura del directorio del DFS y para realizar las operaciones sobre los archivos y directorios. Solo se permite crear directorios. 
+
+Grupo #2
+Desarrolla la aplicación servidor y el back-end
+Implementación de la aplicación servidor contiene
+1.	La interfaz gráfica donde se ven los clientes que acceden al sistema y los archivos que están accediendo
+Implementación del back-end contiene 
+1.	Los servicios de lectura y escritura de un archivo en el disco local
+2.	El servicio de mantenimiento del cache 
+3.	Llevar el control de las versiones de los archivos 
+4.	Los servicios de lectura y escritura de la estructura de directorios que este en el disco local. Defina el directorio /dfs en el sistema de archivos local para  crear la estructura de directorios del DFS
